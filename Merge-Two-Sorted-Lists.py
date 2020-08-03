@@ -1,5 +1,5 @@
 # level: easy
-# complexity: time o(n), space o(n)
+# complexity: Time O(n), Space O(n)
 
 # Definition for singly-linked list.
 # class ListNode(object):
