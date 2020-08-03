@@ -1,4 +1,5 @@
 # level: easy
+# complexity: time o(n^2), space o(n^2)
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
