@@ -1,5 +1,6 @@
 # level: easy
-# complexity: Time O(n^2), Space O(n^2)
+# complexity: time complexity is O(min_length * n), where min_length is the minimum length of the strs and n is the number of strs.
+#             space: O(1) constant space
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
@@ -10,26 +11,29 @@ class Solution(object):
         """
         if input is empty, return ""
         find the max length the longest common prefix can be, which is the max length of the shorted string from the input
+        can also be written as:
+        if not strs:
+            return ""
         """
         if len(strs) == 0 :
             return ""
 
         '''
-        sorted(strs, key=len) sorts the strings by length, from shortest to longest.
+        find the shortest string from strs, it determines when to end the iteration
         '''
-        self.max_length = len(sorted(strs, key = len)[0])
-        self.longest = ""
+        min_length = min(len(s) for s in strs) #n
+        lcp = "" #lonngest common prefix
 
         '''
         iterate through index of each input string
         '''
-        for i in range(self.max_length) :
-            self.char_at_an_index = [word[i] for word in strs]
+        for i in range(min_length) : #m
+            char_at_an_index = [word[i] for word in strs]
             '''
             count() returns the number of occurrences of a substring in the given string.
             '''
-            if self.char_at_an_index.count(self.char_at_an_index[0]) == len(self.char_at_an_index) :
-                self.longest += str(self.char_at_an_index[0])
+            if char_at_an_index.count(char_at_an_index[0]) == len(char_at_an_index) :
+                lcp += str(char_at_an_index[0])
             else :
-                return self.longest
-        return self.longest
+                return lcp
+        return lcp
