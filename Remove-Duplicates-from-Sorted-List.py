@@ -30,5 +30,13 @@ class Solution(object):
         """
         if head and head.next:
             head.next = self.deleteDuplicates(head.next)
-            return head.next if head.next.val == head.val else head # move on to the next node after head.next if duplicate exists, else dont
+            if head.next.val == head.val:
+                return head.next
+            else:
+                return head # move on to the next node after head.next if duplicate exists, else dont
+
+            ###########################
+            # or write it as one liner#
+            ###########################
+            #return head.next if head.next.val == head.val else head # move on to the next node after head.next if duplicate exists, else dont
         return head
