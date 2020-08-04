@@ -2,6 +2,7 @@
 # complexity:  Time O(n), Space: O(n)
 # brute force would be checking each value in the list and the ones that follows, to see if they sum up to target value
 # optimal is to use a hashmap
+# https://leetcode.com/problems/two-sum/
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         map_so_far = {} # val : index

@@ -1,5 +1,6 @@
 # level: easy
 # complexity: O(n) time and space, takes n time to iterate through the list
+# https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
 # Definition for singly-linked list.
 # class ListNode(object):

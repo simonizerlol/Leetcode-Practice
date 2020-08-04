@@ -1,6 +1,7 @@
 # level: easy
 # complexity: time complexity is O(min_length * n), where min_length is the minimum length of the strs and n is the number of strs.
 #             space: O(1) constant space
+# https://leetcode.com/problems/longest-common-prefix/
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
