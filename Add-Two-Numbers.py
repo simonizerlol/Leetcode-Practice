@@ -1,6 +1,6 @@
 # 2. Add Two Numbers https://leetcode.com/problems/add-two-numbers/
 # level: medium
-# complexity: O(n) time and space
+# complexity: O(n) time, O(1) space
 
 # Definition for singly-linked list.
 # class ListNode(object):
