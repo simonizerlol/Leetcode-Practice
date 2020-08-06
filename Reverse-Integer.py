@@ -1,6 +1,7 @@
+# 7. Reverse Integer https://leetcode.com/problems/reverse-integer/
 # level: easy
 # complexity: time O(n), space O(1)
-# https://leetcode.com/problems/reverse-integer/
+
 class Solution(object):
     def reverse(self, x):
         """
@@ -10,7 +11,7 @@ class Solution(object):
         # this is the almost 1 liner
         sign = cmp(x,0) # if x is greater than 0, then sign is 1, else -1
         reversed = int(str(x*sign)[::-1]) # covert possitive x to string, then reverse it, finally covert it back to int
-        return sign*reversed * (r < 2**31)
+        return sign*reversed * (reversed < 2**31)
 
         """
         traditional way:

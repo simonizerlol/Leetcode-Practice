@@ -1,10 +1,14 @@
+# 1. Two Sum https://leetcode.com/problems/two-sum/
 # leve: easy
 # complexity:  Time O(n), Space: O(n)
-# brute force would be checking each value in the list and the ones that follows, to see if they sum up to target value
-# optimal is to use a hashmap
-# https://leetcode.com/problems/two-sum/
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+"""
+Explaination:
+brute force would be checking each value in the list and the ones that follows, to see if they sum up to target value.
+The optimal solution is to use a hashmap
+"""
+
+class Solution(object):
+    def twoSum(self, nums, target):
         map_so_far = {} # val : index
 
         for index, value in enumerate(nums):
