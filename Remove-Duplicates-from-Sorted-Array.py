@@ -7,19 +7,17 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        # base case:
         if not nums:
             return 0
 
         # otherwise, length = 1, which is the length of the sorted array without duplicates.
         length = 1
-        lst = nums[0]
+        lst = nums[0] # initialize a pointer
 
         for n in nums:
-            # if n is not a duplicate, then update length
+            # if n is not a duplicate, then update lst, length
             if n != lst:
                 lst = n
                 nums[length] = n
                 length +=1
-        nums = nums[:length]
         return length
