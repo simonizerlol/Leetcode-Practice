@@ -30,6 +30,7 @@ class Solution(object):
 
         """
         another implementation: (similar)
+        Reference & in-depth explaination: https://keithschwarz.com/interesting/code/?dir=find-duplicate
         """
         slow = fast = duplicate = 0
         while True:
