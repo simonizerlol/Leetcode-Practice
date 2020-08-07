@@ -20,9 +20,9 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        # base case: as we branch and move left, left ... when only one node is left, we return it
-        if not head or not head.next:
-            return head
+        # Since we are given non-empty, singly linked list, no need to check this
+        # if not head or not head.next:
+        #     return head
 
         """
         Each time, slow go 1 steps while fast go 2 steps.
