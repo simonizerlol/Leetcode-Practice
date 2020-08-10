@@ -16,10 +16,12 @@ public:
                                    { 'D' , 500 },
                                    { 'M' , 1000 } };
        int sum = 0;
-       for (int i = 0; i < s.length(); ++i) {
+       for (int i = 0; i < s.length(); i++) {
+           // e.g. IV = -1 + 5 = 4
            if (table[s[i]] < table[s[i + 1]]) {
                sum -= table[s[i]];
-           } else {
+           }
+           else {
                sum += table[s[i]];
            }
        }
