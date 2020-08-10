@@ -16,15 +16,15 @@ public:
         // fibonacci number implementation: https://www.youtube.com/watch?v=wTlw7fNcO-0
         // complexicity: O(n) time as single loop upto n is required to calculate n^th  fibonacci number.
         //               O(1) space
-        if (n == 1) return 1;
+        if (n == 1) return 1; // base case when n = 1
         int first = 1;
         int second = 2;
-        for (int i = 3; i <= n; i++) {
+        for (int i = 3; i <= n; i++) { // starting from n = 3
             int third = first + second;
             first = second;
             second = third;
         }
-        return second;
+        return second; // if n = 2, return second
     }
 
     int climb(int n, vector<int> &memo){
