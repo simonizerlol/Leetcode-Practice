@@ -28,11 +28,12 @@ public:
     }
 
     int climb(int n, vector<int> &memo){
-        if(n==1||n==2) return n;
+        if(n == 1 || n == 2) return n;
 
-        if(memo[n]>0) {
+        if(memo[n] > 0) {
             return memo[n];
         }
+        
         int result = climb(n-1, memo)+climb(n-2, memo);
         memo[n] = result;
         return result;
