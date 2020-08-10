@@ -1,35 +1,23 @@
-# 7. Reverse Integer https://leetcode.com/problems/reverse-integer/
-# level: easy
-# complexity: time O(n), space O(1)
+// # 7. Reverse Integer https://leetcode.com/problems/reverse-integer/
+// # level: easy
+// # complexity: time O(log(x)) as there are about log x digits in x, space O(1)
 
-class Solution(object):
-    def reverse(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
-        # this is the almost 1 liner
-        sign = cmp(x,0) # if x is greater than 0, then sign is 1, else -1
-        reversed = int(str(x*sign)[::-1]) # covert possitive x to string, then reverse it, finally covert it back to int
-        return sign*reversed * (reversed < 2**31)
-
-        """
-        traditional way:
-        """
-        # check if x is within the 32-bit signed integer range
-        # if(x > ((2**31)-1) or x < -1 * (2**31)):
-        #     return 0
-
-        reversed = 0
-        num = x
-        x = abs(x)
-
-        while(x > 0):
-            reversed = reversed * 10 + x % 10
-            x = x//10 # floor division
-
-        # check if reversed integer overflows (is within the 32-bit signed integer range)
-        if(reversed > ((2**31)-1) or reversed < -1 * (2**31)):
-            return 0
-
-        return reversed if(num > 0) else -1 * reversed
+// rewriting my python code in cpp to brush up my cpp
+class Solution {
+public:
+    int reverse(int x) {
+        // The idea is to repeatedly pop the last digit off of x and push it to the back of the rev.
+        long rev = 0;
+        while(x){
+            rev = rev*10 + x%10;
+            x /= 10; // x = x/10;
+        }
+        // check and see if reversed integer overflows.
+        if(INT_MAX < rev || INT_MIN > rev){
+            return 0;
+        }
+        else{
+            return rev;
+        }
+    }
+};
