@@ -1,5 +1,5 @@
 // 20. Valid Parentheses https://leetcode.com/problems/valid-parentheses/
-// complexcity: O(n) time as traversing the given string one character at a time and push, and pop operations on a stack take O(1) time
+// complexity: O(n) time as traversing the given string one character at a time and push, and pop operations on a stack take O(1) time
 //              O(n) space as pushing all opening brackets onto the stack and in the worst case, we will end up pushing all the brackets onto the stack. e.g. ((((.
 
 class Solution {
